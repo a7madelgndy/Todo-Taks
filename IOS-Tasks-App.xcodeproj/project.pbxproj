@@ -11,6 +11,9 @@
 		15005D9F2C9DA79A00A28D34 /* DoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15005D9E2C9DA79A00A28D34 /* DoneTableViewController.swift */; };
 		157D693E2C99F3EC004C7997 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D693D2C99F3EC004C7997 /* MenuSection.swift */; };
 		15A1FAEE2C9F409100E962F8 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1FAED2C9F409100E962F8 /* NewTaskViewController.swift */; };
+		15A1FAF02CA05E4500E962F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15A1FAEF2CA05E4500E962F8 /* GoogleService-Info.plist */; };
+		15A1FAF22CA070BC00E962F8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1FAF12CA070BC00E962F8 /* Task.swift */; };
+		15A1FAF52CA073F100E962F8 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1FAF42CA073F100E962F8 /* DataBaseManager.swift */; };
 		15A32C362C9852E100296915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A32C352C9852E100296915 /* AppDelegate.swift */; };
 		15A32C382C9852E100296915 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A32C372C9852E100296915 /* SceneDelegate.swift */; };
 		15A32C3A2C9852E100296915 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A32C392C9852E100296915 /* TasksViewController.swift */; };
@@ -26,6 +29,9 @@
 		15005D9E2C9DA79A00A28D34 /* DoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTableViewController.swift; sourceTree = "<group>"; };
 		157D693D2C99F3EC004C7997 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
 		15A1FAED2C9F409100E962F8 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
+		15A1FAEF2CA05E4500E962F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		15A1FAF12CA070BC00E962F8 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		15A1FAF42CA073F100E962F8 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		15A32C322C9852E100296915 /* IOS-Tasks-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-Tasks-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A32C352C9852E100296915 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15A32C372C9852E100296915 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,8 +70,17 @@
 			isa = PBXGroup;
 			children = (
 				157D693D2C99F3EC004C7997 /* MenuSection.swift */,
+				15A1FAF12CA070BC00E962F8 /* Task.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		15A1FAF32CA073D600E962F8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				15A1FAF42CA073F100E962F8 /* DataBaseManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		15A32C292C9852E100296915 = {
@@ -89,6 +104,7 @@
 		15A32C342C9852E100296915 /* IOS-Tasks-App */ = {
 			isa = PBXGroup;
 			children = (
+				15A1FAF32CA073D600E962F8 /* Service */,
 				15005D992C9DA6C300A28D34 /* Controller */,
 				157D693C2C99F3C8004C7997 /* Model */,
 				15A32C352C9852E100296915 /* AppDelegate.swift */,
@@ -97,6 +113,7 @@
 				15A32C3B2C9852E100296915 /* Main.storyboard */,
 				15A32C3E2C9852E400296915 /* Assets.xcassets */,
 				15A32C402C9852E400296915 /* LaunchScreen.storyboard */,
+				15A1FAEF2CA05E4500E962F8 /* GoogleService-Info.plist */,
 				15A32C432C9852E400296915 /* Info.plist */,
 			);
 			path = "IOS-Tasks-App";
@@ -180,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A32C3F2C9852E400296915 /* Assets.xcassets in Resources */,
+				15A1FAF02CA05E4500E962F8 /* GoogleService-Info.plist in Resources */,
 				15A32C422C9852E400296915 /* Base in Resources */,
 				15A32C3D2C9852E100296915 /* Base in Resources */,
 			);
@@ -234,6 +252,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A1FAF22CA070BC00E962F8 /* Task.swift in Sources */,
+				15A1FAF52CA073F100E962F8 /* DataBaseManager.swift in Sources */,
 				15A32C3A2C9852E100296915 /* TasksViewController.swift in Sources */,
 				15A1FAEE2C9F409100E962F8 /* NewTaskViewController.swift in Sources */,
 				15005D9B2C9DA6EE00A28D34 /* TasksTableViewController.swift in Sources */,

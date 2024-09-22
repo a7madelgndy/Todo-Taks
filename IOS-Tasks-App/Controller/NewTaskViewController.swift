@@ -14,7 +14,9 @@ class NewTaskViewController: UIViewController {
     @IBOutlet var saveButton :UIButton!
     
     @IBOutlet var containerView: UIView!
+    
     private var subscriber = Set<AnyCancellable>()
+    private let dataBaseManager = DataBaseManager()
     @Published private var taskString : String? // to observe chenges on the taskString
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,10 +65,20 @@ class NewTaskViewController: UIViewController {
         
     }
     @objc private func dismissViewController() {
-        dismiss(animated: true, completion: nil)
-    }
+        dismiss(animated: true, completion: nil)    }
     @IBAction func calenderButtonTapped(_ sender: Any) {
     }
     @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let taskString = self.taskString else {return }
+        let task = Task(title: taskString)
+        dataBaseManager.addTask(task) { (result) in
+            switch result {
+            case .success:
+                print("new Task Was Add to the Database FireStore")
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
